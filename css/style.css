@@ -362,19 +362,132 @@ body{
     width:100%;
     border-radius:15px;
     box-shadow:0 10px 25px rgba(0,0,0,.15);
-}
+}/* =========================
+   MOBILE
+========================= */
 
 @media (max-width:768px){
 
-    .lokasi-wrapper{
-        grid-template-columns:1fr;
-    }
+body{
+    overflow-x:hidden;
+}
 
-    .btn-maps,
-    .btn-wa{
-        display:block;
-        text-align:center;
-        margin-right:0;
-    }
+.navbar{
+    flex-direction:column;
+    padding:15px;
+}
+
+.logo{
+    flex-direction:column;
+    text-align:center;
+}
+
+.logo img{
+    width:60px;
+    margin:0 0 10px;
+}
+
+.logo h2{
+    font-size:22px;
+}
+
+.menu{
+    margin:20px 0;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.menu li{
+    margin:8px 12px;
+}
+
+.hero{
+    height:auto;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:42px;
+}
+
+.hero h2{
+    font-size:24px;
+}
+
+.hero h3{
+    font-size:22px;
+}
+
+.hero p,
+.produk-singkat{
+    font-size:17px;
+    line-height:1.7;
+}
+
+.hero-button{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.hero-button a{
+    width:100%;
+    margin:0;
+}
+
+.produk{
+    padding:50px 20px;
+}
+
+.judul-produk h2{
+    font-size:32px;
+}
+
+.produk-grid{
+    grid-template-columns:1fr;
+}
+
+.card img{
+    height:240px;
+}
+
+.Tentang{
+    padding:50px 20px;
+}
+
+.Tentang h2{
+    font-size:32px;
+}
+
+.Tentang p{
+    text-align:left;
+}
+
+.keunggulan{
+    grid-template-columns:1fr;
+}
+
+.lokasi{
+    padding:50px 20px;
+}
+
+.lokasi-wrapper{
+    grid-template-columns:1fr;
+}
+
+.lokasi h2{
+    font-size:32px;
+}
+
+.btn-maps,
+.btn-wa{
+    width:100%;
+    text-align:center;
+    margin:10px 0;
+}
+
+.maps iframe{
+    height:300px;
+}
 
 }
