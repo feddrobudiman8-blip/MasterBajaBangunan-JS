@@ -187,7 +187,7 @@ body{
    PRODUK
 ========================= */
 
-.Produk{
+.produk{
     padding:80px 8%;
     background:#ffffff;
 }
@@ -245,24 +245,24 @@ body{
    TENTANG
 ========================= */
 
-.Tentang{
+.tentang{
     padding:80px 8%;
     background:#f7f7f7;
 }
 
-.Tentang-container{
+.tentang-container{
     max-width:1000px;
     margin:auto;
 }
 
-.Tentang h2{
+.tentang h2{
     text-align:center;
     color:#0b3d91;
     font-size:42px;
     margin-bottom:30px;
 }
 
-.Tentang p{
+.tentang p{
     font-size:18px;
     color:#555;
     line-height:1.8;
@@ -485,4 +485,14 @@ body{
 
 .maps iframe{
     height:300px;
+}.produk-singkat{
+    max-width:900px;
+    margin:20px auto 35px;
+    font-size:18px;
+    line-height:1.8;
+    color:#ffffff;
+    font-weight:500;
+
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
