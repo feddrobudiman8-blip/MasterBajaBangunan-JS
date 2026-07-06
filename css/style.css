@@ -496,4 +496,13 @@ body{
     overflow-wrap: break-word;
     word-break: break-word;
 }
+}html,
+body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden !important;
+}
+
+*{
+    max-width:100%;
 }
