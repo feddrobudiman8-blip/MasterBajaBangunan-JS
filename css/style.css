@@ -161,25 +161,22 @@ body{
 }
 
 .btn-produk{
-
     background:#ffd400;
-
     color:#0b3d91;
-
     padding:15px 30px;
-
     text-decoration:none;
-
     border-radius:30px;
-
     font-weight:bold;
+}
 
-}.hero h3{
+.hero h3{
     font-size:28px;
     color:#ffd400;
     margin-bottom:20px;
     font-weight:600;
-}.produk-singkat{
+}
+
+.produk-singkat{
     max-width: 900px;
     margin: 20px auto 35px;
     font-size: 18px;
@@ -190,7 +187,7 @@ body{
    PRODUK
 ========================= */
 
-.produk{
+.Produk{
     padding:80px 8%;
     background:#ffffff;
 }
@@ -367,7 +364,7 @@ body{
 ========================= */
 
 @media (max-width:768px){
-
+}
 body{
     overflow-x:hidden;
 }
