@@ -364,7 +364,7 @@ body{
 ========================= */
 
 @media (max-width:768px){
-}
+
 body{
     overflow-x:hidden;
 }
@@ -485,14 +485,15 @@ body{
 
 .maps iframe{
     height:300px;
-}.produk-singkat{
+}
+.produk-singkat{
     max-width:900px;
     margin:20px auto 35px;
     font-size:18px;
     line-height:1.8;
     color:#ffffff;
     font-weight:500;
-
     overflow-wrap: break-word;
     word-break: break-word;
+}
 }
