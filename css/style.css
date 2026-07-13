@@ -701,3 +701,34 @@ header .btn-wa{
     color:#25D366;
     text-decoration:underline;
 }
+
+footer{
+    background:#0b3d91;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+}
+
+.footer p{
+    margin:8px 0;
+}
+
+.developer{
+    color:#dcdcdc;
+    font-size:15px;
+    line-height:1.8;
+}
+
+.developer strong{
+    color:#ffd700;
+}
+
+.developer a{
+    color:#25D366;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.developer a:hover{
+    text-decoration:underline;
+}
