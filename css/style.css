@@ -48,7 +48,7 @@ header{
     left:0;
     width:100%;
     background:#0b3d91;
-    z-index:999;
+    z-index:1001;
     box-shadow:0 5px 15px rgba(0,0,0,.15);
 }
 
@@ -536,10 +536,10 @@ footer a{
 
 .menu{
     position: fixed;
-    top: 0;
+    top: 80px;
     right: -280px;
     width: 260px;
-    height: 100vh;
+    height: calc(100vh - 80px);
 
     background: #0b3d91;
 
