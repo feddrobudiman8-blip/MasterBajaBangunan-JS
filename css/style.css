@@ -1,200 +1,246 @@
-/* Reset */
+/* ===================================================
+   MASTER BAJA BANGUNAN
+   STYLE.CSS
+=================================================== */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:#222;
     background:#f5f7fa;
+    line-height:1.6;
+    overflow-x:hidden;
 }
 
-/* Navbar */
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+section{
+    padding:80px 8%;
+}
+
+/* =======================================
+   NAVBAR
+======================================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#0b3d91;
+    z-index:999;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
 
 .navbar{
-
+    max-width:1400px;
+    margin:auto;
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
     padding:15px 8%;
-
-    background:#0b3d91;
-
-    position:sticky;
-
-    top:0;
-
-    z-index:1000;
-
+    position:relative;
 }
 
+/* =======================================
+   LOGO
+======================================= */
+
 .logo{
-
     display:flex;
-
     align-items:center;
-
+    gap:15px;
 }
 
 .logo img{
-
-    width:80px;
-
-    margin-right:15px;
-
+    width:65px;
 }
 
 .logo h2{
-
     color:white;
-
-    font-size:24px;
-
+    font-size:26px;
+    font-weight:800;
+    letter-spacing:1px;
 }
+
+/* =======================================
+   MENU
+======================================= */
 
 .menu{
-
     display:flex;
-
-    list-style:none;
-
+    align-items:center;
+    gap:30px;
 }
 
-.menu li{
-
-    margin-left:30px;
-
-}
-
-.menu a{
-
+.menu li a{
     color:white;
-
-    text-decoration:none;
-
-    font-weight:bold;
-
+    font-size:17px;
+    font-weight:600;
     transition:.3s;
-
 }
 
-.menu a:hover{
-
-    color:#ffd400;
-
+.menu li a:hover{
+    color:#ffd447;
 }
+
+/* =======================================
+   BUTTON WHATSAPP
+======================================= */
 
 .btn-wa{
-
     background:#25D366;
-
     color:white;
-
-    text-decoration:none;
-
-    padding:12px 20px;
-
-    border-radius:30px;
-
+    padding:13px 26px;
+    border-radius:50px;
     font-weight:bold;
-
     transition:.3s;
-
+    box-shadow:0 10px 25px rgba(37,211,102,.35);
 }
 
 .btn-wa:hover{
+    transform:translateY(-3px);
+    background:#1ebe5b;
+}
 
-    background:#1ea952;
+/* =======================================
+   HAMBURGER
+======================================= */
 
-}/* HERO */
+.menu-toggle{
+    display:none;
+    color:white;
+    font-size:34px;
+    cursor:pointer;
+}
+
+/* =======================================
+   HERO
+======================================= */
 
 .hero{
-
-    height:100vh;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
 
     background:
-    linear-gradient(rgba(11,61,145,.65),
-    rgba(11,61,145,.65)),
+    linear-gradient(rgba(11,61,145,.70),
+    rgba(11,61,145,.70)),
     url("../images/hero.jpg");
 
     background-size:cover;
-
     background-position:center;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
 
     color:white;
 
+    padding-top:140px;
+}
+
+.hero-content{
+    max-width:900px;
+    animation:fadeUp 1s ease;
 }
 
 .hero h1{
-
-    font-size:60px;
-
+    font-size:68px;
+    font-weight:900;
+    line-height:1.1;
     margin-bottom:20px;
-
 }
 
-.hero p{
-
-    font-size:22px;
-
-    margin-bottom:35px;
-
-}
-
-.hero-button a{
-
-    margin:10px;
-
-}
-
-.btn-produk{
-    background:#ffd400;
-    color:#0b3d91;
-    padding:15px 30px;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
+.hero h2{
+    font-size:36px;
+    margin-bottom:15px;
 }
 
 .hero h3{
-    font-size:28px;
-    color:#ffd400;
-    margin-bottom:20px;
-    font-weight:600;
+    color:#ffd447;
+    font-size:30px;
+    margin-bottom:30px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:25px;
 }
 
 .produk-singkat{
-    max-width: 900px;
-    margin: 20px auto 35px;
-    font-size: 18px;
-    line-height: 1.8;
-    color: #ffffff;
-    font-weight: 500;
-}/* =========================
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+.hero-button{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn-produk{
+    background:white;
+    color:#0b3d91;
+    padding:15px 35px;
+    border-radius:50px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-produk:hover{
+    transform:translateY(-3px);
+    background:#ffd447;
+}
+
+/* =======================================
+   ANIMATION
+======================================= */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+/* =======================================
    PRODUK
-========================= */
+======================================= */
 
 .produk{
-    padding:80px 8%;
-    background:#ffffff;
+    background:#f8fafc;
 }
 
 .judul-produk{
     text-align:center;
-    margin-bottom:50px;
+    margin-bottom:60px;
 }
 
 .judul-produk h2{
@@ -204,29 +250,29 @@ body{
 }
 
 .judul-produk p{
-    color:#666;
-    font-size:18px;
     max-width:800px;
     margin:auto;
-    line-height:1.7;
+    color:#666;
+    font-size:18px;
 }
 
 .produk-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
 }
 
 .card{
-    background:#fff;
-    border-radius:15px;
+    background:white;
+    border-radius:18px;
     overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-    transition:.3s;
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+    transition:.35s;
 }
 
 .card:hover{
     transform:translateY(-10px);
+    box-shadow:0 18px 40px rgba(0,0,0,.15);
 }
 
 .card img{
@@ -239,284 +285,419 @@ body{
     padding:20px;
     text-align:center;
     color:#0b3d91;
-}html{
-    scroll-behavior: smooth;
-}/* =========================
-   TENTANG
-========================= */
-
-.tentang{
-    padding:80px 8%;
-    background:#f7f7f7;
+    font-size:22px;
 }
 
-.tentang-container{
-    max-width:1000px;
+/* =======================================
+   TENTANG
+======================================= */
+
+.Tentang{
+    background:white;
+}
+
+.Tentang-container{
+    max-width:1200px;
     margin:auto;
 }
 
-.tentang h2{
-    text-align:center;
+.Tentang-text h2{
     color:#0b3d91;
     font-size:42px;
-    margin-bottom:30px;
+    margin-bottom:25px;
 }
 
-.tentang p{
+.Tentang-text p{
     font-size:18px;
     color:#555;
-    line-height:1.8;
-    text-align:justify;
     margin-bottom:20px;
+    line-height:1.9;
 }
 
 .keunggulan{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:18px;
     margin-top:40px;
 }
 
 .keunggulan div{
-    background:#ffffff;
-    padding:20px;
+    background:#0b3d91;
+    color:white;
+    padding:18px;
     border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
     font-weight:bold;
-    color:#0b3d91;
     text-align:center;
     transition:.3s;
 }
 
 .keunggulan div:hover{
+    background:#ffd447;
+    color:#222;
     transform:translateY(-5px);
-}/* =========================
+}
+/* =======================================
    LOKASI
-========================= */
+======================================= */
 
 .lokasi{
-    padding:80px 8%;
-    background:#f8f9fb;
+    background:#f8fafc;
 }
 
 .lokasi h2{
     text-align:center;
     font-size:42px;
     color:#0b3d91;
-    margin-bottom:50px;
+    margin-bottom:15px;
+}
+
+.lokasi h3{
+    text-align:center;
+    color:#333;
+    margin-bottom:20px;
+}
+
+.lokasi>p{
+    text-align:center;
+    margin-bottom:20px;
+    color:#555;
 }
 
 .lokasi-wrapper{
     display:grid;
-    grid-template-columns:1fr 1.5fr;
+    grid-template-columns:1fr 1fr;
     gap:40px;
+    margin-top:50px;
     align-items:center;
 }
 
+.lokasi-info{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
 .lokasi-info h3{
+    text-align:left;
     color:#0b3d91;
-    font-size:30px;
     margin-bottom:20px;
 }
 
 .lokasi-info p{
+    margin-bottom:25px;
     line-height:1.8;
     color:#555;
-    margin-bottom:20px;
 }
 
-.btn-maps,
-.btn-wa{
-    display:inline-block;
-    padding:14px 28px;
-    margin-right:15px;
-    margin-top:15px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
+.maps iframe{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
 }
 
 .btn-maps{
+    display:inline-block;
     background:#0b3d91;
     color:white;
+    padding:15px 30px;
+    border-radius:50px;
+    font-weight:bold;
+    margin-right:15px;
+    margin-bottom:15px;
+    transition:.3s;
 }
 
 .btn-maps:hover{
-    background:#082c69;
+    background:#072f70;
+    transform:translateY(-3px);
+}
+/* =======================================
+   DAFTAR HARGA
+======================================= */
+
+.harga{
+    background:#ffffff;
 }
 
-.btn-wa{
-    background:#25D366;
-    color:white;
-}
-
-.btn-wa:hover{
-    background:#1ca851;
-}
-
-.maps iframe{
-    width:100%;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-}/* =========================
-   MOBILE
-========================= */
-
-@media (max-width:768px){
-
-body{
-    overflow-x:hidden;
-}
-
-.navbar{
-    flex-direction:column;
-    padding:15px;
-}
-
-.logo{
-    flex-direction:column;
+.judul-harga{
     text-align:center;
+    margin-bottom:60px;
 }
 
-.logo img{
-    width:60px;
-    margin:0 0 10px;
-}
-
-.logo h2{
-    font-size:22px;
-}
-
-.menu{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    width:100%;
-    margin:20px 0;
-    gap:15px;
-
-}
-
-.menu li{
-    margin:0;
-}
-
-.hero{
-    min-height:100vh;
-    height:auto;
-    padding:120px 20px 60px;
-}
-
-.hero h1{
+.judul-harga h2{
     font-size:42px;
+    color:#0b3d91;
+    margin-bottom:15px;
 }
 
-.hero h2{
+.judul-harga p{
+    color:#666;
+    font-size:18px;
+    max-width:700px;
+    margin:auto;
+}
+
+.harga-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+    gap:30px;
+    margin-bottom:50px;
+}
+
+.harga-card{
+    background:#f8fafc;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.harga-card h3{
+    color:#0b3d91;
+    margin-bottom:20px;
     font-size:24px;
 }
 
-.hero h3{
+.harga-card table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.harga-card tr{
+    border-bottom:1px solid #ddd;
+}
+
+.harga-card td{
+    padding:14px 5px;
+    font-size:17px;
+}
+
+.harga-card td:last-child{
+    text-align:right;
+    font-weight:bold;
+    color:#0b3d91;
+}
+
+.harga-card tr:hover{
+    background:#eef5ff;
+}
+/* =======================================
+   FOOTER
+======================================= */
+
+footer{
+    background:#0b3d91;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+}
+
+footer h3{
+    margin-bottom:15px;
+    font-size:26px;
+}
+
+footer p{
+    opacity:.9;
+    line-height:1.8;
+}
+
+footer a{
+    color:#ffd447;
+}/* =======================================
+   RESPONSIVE MOBILE
+======================================= */
+
+@media (max-width:768px){
+
+.navbar{
+    padding:15px 20px;
+    flex-wrap:wrap;
+}
+
+.logo{
+    width:calc(100% - 50px);
+}
+
+.logo h2{
+    font-size:20px;
+}
+
+.logo img{
+    width:50px;
+}
+
+.menu-toggle{
+    display:block;
+    font-size:32px;
+    color:#fff;
+    cursor:pointer;
+}
+
+.menu{
+    display:none;
+    width:100%;
+    flex-direction:column;
+    align-items:center;
+    background:#0b3d91;
+    margin-top:15px;
+    padding:20px 0;
+    border-radius:12px;
+}
+
+.menu.active{
+    display:flex;
+}
+
+.menu li{
+    margin:12px 0;
+}
+
+header .btn-wa{
+    display:none;
+}
+
+   
+    .hero{
+        padding:130px 25px 70px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero h2{
+        font-size:24px;
+    }
+
+    .hero h3{
+        font-size:22px;
+    }
+
+    .hero p,
+    .produk-singkat{
+        font-size:16px;
+    }
+
+    .hero-button{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .btn-produk,
+    .hero-button .btn-wa{
+        width:100%;
+        max-width:320px;
+        text-align:center;
+    }
+
+    .lokasi-wrapper{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:70px 20px;
+    }
+.harga-grid{
+    grid-template-columns:1fr;
+}
+
+.harga-card{
+    padding:20px;
+}
+
+.harga-card h3{
     font-size:22px;
 }
 
-.hero p,
-.produk-singkat{
-    font-size:17px;
-    line-height:1.7;
+.harga-card td{
+    font-size:15px;
+    padding:12px 5px;
 }
 
-.hero-button{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-}
-.hero-content{
-    width:100%;
-}
-.hero-button a{
-    width:100%;
-    margin:0;
-}
-
-.produk{
-    padding:50px 20px;
-}
-
-.judul-produk h2{
+.judul-harga h2{
     font-size:32px;
 }
+}/* =======================================
+   INFO TAMBAHAN
+======================================= */
 
-.produk-grid{
-    grid-template-columns:1fr;
-}
-
-.card img{
-    height:240px;
-}
-
-.Tentang{
-    padding:50px 20px;
-}
-
-.Tentang h2{
-    font-size:32px;
-}
-
-.Tentang p{
-    text-align:left;
-}
-
-.keunggulan{
-    grid-template-columns:1fr;
-}
-
-.lokasi{
-    padding:50px 20px;
-}
-
-.lokasi-wrapper{
-    grid-template-columns:1fr;
-}
-
-.lokasi h2{
-    font-size:32px;
-}
-
-.btn-maps,
-.btn-wa{
-    width:100%;
+.info-tambahan{
+    background:#ffffff;
     text-align:center;
-    margin:10px 0;
 }
 
-.maps iframe{
-    height:300px;
+.info-tambahan h2{
+    font-size:40px;
+    color:#0b3d91;
+    margin-bottom:45px;
 }
-.produk-singkat{
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
     max-width:900px;
-    margin:20px auto 35px;
+    margin:auto;
+}
+
+.info-card{
+    background:#f8fafc;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+.info-card h3{
+    color:#0b3d91;
+    margin-bottom:20px;
+    font-size:28px;
+}
+
+.info-card p,
+.info-card li{
     font-size:18px;
+    color:#555;
     line-height:1.8;
-    color:#ffffff;
-    font-weight:500;
-    overflow-wrap: break-word;
-    word-break: break-word;
-}
-}html,
-body{
-    width:100%;
-    max-width:100%;
-    overflow-x:hidden !important;
 }
 
-*{
-    max-width:100%;
-}img{
-    max-width:100%;
-    height:auto;
+.info-card ul{
+    list-style:none;
+    padding:0;
+}
+@media (max-width:768px){
+
+    .info-tambahan h2{
+        font-size:30px;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .info-card{
+        padding:25px;
+    }
+
+    .info-card h3{
+        font-size:24px;
+    }
+
+    .info-card p,
+    .info-card li{
+        font-size:16px;
+    }
+
+}
+.info-card a{
+    color:#0b3d91;
+    font-weight:bold;
+    text-decoration:none;
+    transition:.3s;
 }
 
-.hero-content{
-    overflow:hidden;
+.info-card a:hover{
+    color:#25D366;
+    text-decoration:underline;
 }
