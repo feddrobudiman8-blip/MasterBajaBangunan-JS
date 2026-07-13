@@ -535,22 +535,47 @@ footer a{
 }
 
 .menu{
-    display:none;
-    width:100%;
-    flex-direction:column;
-    align-items:center;
-    background:#0b3d91;
-    margin-top:15px;
-    padding:20px 0;
-    border-radius:12px;
+    position: fixed;
+    top: 0;
+    right: -280px;
+    width: 260px;
+    height: 100vh;
+
+    background: #0b3d91;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    padding: 90px 25px;
+
+    transition: .35s ease;
+    z-index: 999;
 }
 
 .menu.active{
-    display:flex;
+    right: 0;
 }
 
 .menu li{
-    margin:12px 0;
+    list-style: none;
+    margin: 18px 0;
+    width: 100%;
+}
+
+.menu a{
+    display: block;
+    width: 100%;
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+.menu a:hover{
+    color: #FFD700;
 }
 
 header .btn-wa{
