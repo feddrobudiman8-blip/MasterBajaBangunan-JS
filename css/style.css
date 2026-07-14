@@ -100,20 +100,22 @@ header{
 /* efek saat discroll */
 
 header.scrolled{
-
-    background:white;
-
-}
-
-header.scrolled .menu li a{
-
-    color:var(--primary);
+    background: #ffffff;
+    box-shadow: 0 5px 20px rgba(0,0,0,.12);
 
 }
 
 header.scrolled .logo h2{
+    color: var(--primary);
+}
 
-    color:var(--primary);
+header.scrolled .menu li a{
+    color: var(--primary) !important;
+
+}
+
+header.scrolled .menu-toggle{
+    color: var(--primary) !important;
 
 }
 
