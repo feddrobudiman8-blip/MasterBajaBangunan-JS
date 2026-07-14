@@ -87,24 +87,13 @@ section{
 header{
 
     position:fixed;
-
     top:0;
     left:0;
-
     width:100%;
-
-    background:
-    rgba(11,61,145,.95);
-
-    backdrop-filter:blur(14px);
-
     z-index:9999;
 
-    transition:.35s;
-
-    box-shadow:
-    0 8px 25px rgba(0,0,0,.12);
-
+    background:rgba(11,61,145,.95);
+    backdrop-filter:blur(14px);
 }
 
 
@@ -134,19 +123,14 @@ header.scrolled .logo h2{
 ========================================================== */
 
 .navbar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #0b3d91;
+    position: relative;
+    width:100%;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
     
-    padding: 15px 20px;
-    z-index: 9999;
-
+    padding:15px 20px;
 }
 
 
@@ -1426,8 +1410,7 @@ header .btn-wa{
 }
 
 .hero{
-
-    padding:180px 20px 80px;
+    padding-top:140px;
 
 }
 
