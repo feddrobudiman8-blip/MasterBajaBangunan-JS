@@ -504,7 +504,13 @@ footer p{
 
 footer a{
     color:#ffd447;
-}/* =======================================
+}
+
+html,
+body{
+    overflow-x: hidden;
+}
+/* =======================================
    RESPONSIVE MOBILE
 ======================================= */
 
@@ -537,8 +543,11 @@ footer a{
 .menu{
     position: fixed;
     top: 80px;
-    right: -260px;
-    width: 220px;
+
+    right: -100%;
+    width: 80%;
+    max-width: 220px;
+
     height: auto;
 
     background: #0b3d91;
