@@ -138,10 +138,14 @@ header.scrolled .logo h2{
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 9999;
-
     background: #0b3d91;
-    box-shadow: 0 5px 20px rgba(0,0,0,.15);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 15px 20px;
+    z-index: 9999;
 
 }
 
@@ -152,11 +156,9 @@ header.scrolled .logo h2{
 
 .logo{
 
-    display:flex;
-
-    align-items:center;
-
-    gap:14px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 
 }
 
@@ -298,17 +300,12 @@ header.scrolled .logo h2{
 ========================================================== */
 
 .menu-toggle{
+    display: block;
+    font-size: 32px;
+    color: #fff;
+    cursor: pointer;
 
-    display:none;
-
-    color:white;
-
-    font-size:34px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
+    margin-left: auto;
 }
 
 .menu-toggle:hover{
