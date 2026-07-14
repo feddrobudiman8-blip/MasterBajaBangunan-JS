@@ -807,3 +807,11 @@ display:inline-flex;
     transform:translateY(-3px);
     box-shadow:0 12px 30px rgba(0,0,0,.35);
 }
+
+.footer-phone{
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 600;
+}
