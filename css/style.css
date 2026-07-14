@@ -110,8 +110,12 @@ header.scrolled .logo h2{
 }
 
 header.scrolled .menu li a{
-    color: var(--primary) !important;
+    color: white !important;
 
+}
+
+header.scrolled .menu{
+    background:#0b3d91;
 }
 
 header.scrolled .menu-toggle{
