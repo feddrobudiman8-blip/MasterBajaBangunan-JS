@@ -20,7 +20,6 @@
 
     <meta name="language" content="Indonesian" />
 
-    <!-- CANONICAL -->
     <link rel="canonical" href="https://masterbajabangunan.my.id/" />
 
     <!-- ============================= -->
@@ -36,9 +35,7 @@
     <!-- ============================= -->
 
     <link rel="icon" type="image/png" href="favicon.png" />
-
     <link rel="shortcut icon" href="favicon.png" />
-
     <link rel="apple-touch-icon" href="favicon.png" />
 
     <!-- ============================= -->
@@ -46,7 +43,6 @@
     <!-- ============================= -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
@@ -94,7 +90,7 @@
     <meta property="og:locale" content="id_ID" />
 
     <!-- ============================= -->
-    <!-- TWITTER / SOCIAL PREVIEW -->
+    <!-- TWITTER -->
     <!-- ============================= -->
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -130,7 +126,6 @@
         "description": "Pusat penjualan dan distributor bahan bangunan di Cisoka, Kabupaten Tangerang. Melayani ecer, grosir dan kebutuhan proyek.",
         "telephone": "+6281213648808",
         "priceRange": "$$",
-
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Jl. Cisoka–Megu, Cempaka",
@@ -139,13 +134,11 @@
           "postalCode": "15730",
           "addressCountry": "ID"
         },
-
         "geo": {
           "@type": "GeoCoordinates",
           "latitude": -6.2615835,
           "longitude": 106.4091963
         },
-
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
@@ -162,7 +155,6 @@
             "closes": "17:00"
           }
         ],
-
         "areaServed": [
           {
             "@type": "City",
@@ -177,7 +169,6 @@
             "name": "Banten"
           }
         ],
-
         "sameAs": [
           "https://instagram.com/tb.mbb",
           "https://www.tiktok.com/@masterbaja"
@@ -204,48 +195,87 @@
       }
     </script>
 
-    <!-- ============================= -->
-    <!-- THEME -->
-    <!-- ============================= -->
-
     <meta name="theme-color" content="#123f8c" />
   </head>
 
   <body>
-    <!-- Navbar -->
+    <!-- ============================= -->
+    <!-- NAVBAR -->
+    <!-- ============================= -->
+
     <header>
       <nav class="navbar">
         <div class="logo">
           <img src="images/logo.png" alt="Master Baja Bangunan" />
+
           <h2>MASTER BAJA BANGUNAN</h2>
         </div>
 
         <div class="menu-toggle" aria-label="Menu">☰</div>
 
         <ul class="menu">
-          <li><a href="#home">Beranda</a></li>
-          <li><a href="#produk">Produk</a></li>
-          <li><a href="#harga">Daftar Harga</a></li>
-          <li><a href="#Tentang">Tentang</a></li>
-          <li><a href="#Lokasi">Lokasi</a></li>
+          <li>
+            <a href="#home" data-i18n="home"> Beranda </a>
+          </li>
+
+          <li>
+            <a href="#produk" data-i18n="products"> Produk </a>
+          </li>
+
+          <li>
+            <a href="#harga" data-i18n="priceList"> Daftar Harga </a>
+          </li>
+
+          <li>
+            <a href="#Tentang" data-i18n="about"> Tentang </a>
+          </li>
+
+          <li>
+            <a href="#Lokasi" data-i18n="location"> Lokasi </a>
+          </li>
         </ul>
 
-        <a href="https://wa.me/6281213648808" class="btn-wa"> Chat WhatsApp </a>
+        <a
+          href="https://wa.me/6281213648808"
+          class="btn-wa"
+          data-i18n="chatWhatsapp"
+        >
+          Chat WhatsApp
+        </a>
+
+        <!-- LANGUAGE SWITCHER -->
+
+        <div class="language-switcher">
+          <button id="idLang" type="button">🇮🇩 ID</button>
+
+          <button id="enLang" type="button">🇺🇸 EN</button>
+        </div>
       </nav>
     </header>
+
+    <!-- ============================= -->
+    <!-- HERO -->
+    <!-- ============================= -->
 
     <section id="home" class="hero">
       <div class="hero-content">
         <h1 data-aos="fade-right">MASTER BAJA BANGUNAN</h1>
-        <h2 data-aos="fade-left">PUSAT PENJUALAN BAHAN BANGUNAN</h2>
-        <h3 data-aos="zoom-in">Distributor Melayani Ecer</h3>
 
-        <p data-aos="fade-up">
+        <h2 data-aos="fade-left" data-i18n="heroSubtitle">
+          PUSAT PENJUALAN BAHAN BANGUNAN
+        </h2>
+
+        <h3 data-aos="zoom-in" data-i18n="heroTagline">
+          Distributor Melayani Ecer
+        </h3>
+
+        <p data-aos="fade-up" data-i18n="heroDescription">
           Solusi Lengkap Kebutuhan Material Bangunan Anda.
         </p>
 
         <p class="produk-singkat" data-aos="fade-up" data-aos-delay="200">
-          <span class="judul-menjual">Menjual:</span>
+          <span class="judul-menjual" data-i18n="weSell"> Menjual: </span>
+
           Semen • Hebel • Bata Merah • Pasir • Batu Kali • Split • Abu Gunung •
           Besi Beton • Behel jadi • Wiremesh • Cakar ayam • Gypsum • GRC •
           ListPlank • Baja Ringan • Besi Hollow • Pipa besi • Bondek • Besi Siku
@@ -253,58 +283,77 @@
           • Kayu Kaso • Kayu Papancor • Tangki Air • Atap Double Layer • Atap
           Single Layer • Spandek Polos • Spandek Pasir • DLL...
         </p>
-        <div class="hero-button" data-aos="zoom-in" data-aos-delay="300">
-          <a href="#produk" class="btn-produk"> Lihat Produk </a>
 
-          <a href="https://wa.me/6281213648808" class="btn-wa">
+        <div class="hero-button" data-aos="zoom-in" data-aos-delay="300">
+          <a href="#produk" class="btn-produk" data-i18n="viewProducts">
+            Lihat Produk
+          </a>
+
+          <a
+            href="https://wa.me/6281213648808"
+            class="btn-wa"
+            data-i18n="chatWhatsapp"
+          >
             Chat WhatsApp
           </a>
         </div>
       </div>
     </section>
 
+    <!-- ============================= -->
     <!-- DAFTAR HARGA -->
+    <!-- ============================= -->
 
     <section id="harga" class="harga">
       <div class="judul-harga" data-aos="fade-down">
-        <h2>Daftar Harga Terbaru</h2>
-        <p>
+        <h2 data-i18n="latestPrices">Daftar Harga Terbaru</h2>
+
+        <p data-i18n="priceNotice">
           Harga dapat berubah sewaktu-waktu. Hubungi kami untuk mendapatkan
           harga terbaru.
         </p>
       </div>
 
       <div class="harga-grid">
+        <!-- STRUKTUR -->
+
         <div class="harga-card" data-aos="fade-right" data-aos-duration="1200">
-          <h3>🏗 Struktur & Pondasi</h3>
+          <h3 data-i18n="structureFoundation">🏗 Struktur & Pondasi</h3>
 
           <table>
             <tr>
-              <td>Bata Ringan</td>
+              <td data-i18n="lightweightBrick">Bata Ringan</td>
+
               <td>Rp470.000/M3</td>
             </tr>
 
             <tr>
-              <td>Semen JKT</td>
-              <td>Mulai Rp39.500/Sak</td>
+              <td data-i18n="cement">Semen JKT</td>
+
+              <td data-i18n="cementPrice">Mulai Rp39.500/Sak</td>
             </tr>
 
             <tr>
-              <td>Pasir</td>
+              <td data-i18n="sand">Pasir</td>
+
               <td>Rp190.000/Kijang</td>
             </tr>
 
             <tr>
-              <td>Split</td>
+              <td data-i18n="split">Split</td>
+
               <td>Rp420.000/Kijang</td>
             </tr>
 
             <tr>
-              <td>Besi Beton</td>
-              <td>Mulai Rp27.500/Btg</td>
+              <td data-i18n="concreteIron">Besi Beton</td>
+
+              <td data-i18n="concreteIronPrice">Mulai Rp27.500/Btg</td>
             </tr>
           </table>
         </div>
+
+        <!-- ATAP -->
 
         <div
           class="harga-card"
@@ -312,27 +361,31 @@
           data-aos-duration="1200"
           data-aos-delay="200"
         >
-          <h3>🏠 Atap & Penutup</h3>
+          <h3 data-i18n="roofing">🏠 Atap & Penutup</h3>
 
           <table>
             <tr>
-              <td>Bondek</td>
-              <td>Mulai Rp77.000/M</td>
+              <td data-i18n="bondek">Bondek</td>
+
+              <td data-i18n="bondekPrice">Mulai Rp77.000/M</td>
             </tr>
 
             <tr>
-              <td>Spandek</td>
-              <td>Mulai Rp38.500/M</td>
+              <td data-i18n="spandek">Spandek</td>
+
+              <td data-i18n="spandekPrice">Mulai Rp38.500/M</td>
             </tr>
 
             <tr>
-              <td>Atap PVC Single Layer</td>
-              <td>Mulai Rp64.500/M</td>
+              <td data-i18n="pvcRoof">Atap PVC Single Layer</td>
+
+              <td data-i18n="pvcRoofPrice">Mulai Rp64.500/M</td>
             </tr>
 
             <tr>
-              <td>Keramik</td>
-              <td>Mulai Rp59.500/Dus</td>
+              <td data-i18n="ceramic">Keramik</td>
+
+              <td data-i18n="ceramicPrice">Mulai Rp59.500/Dus</td>
             </tr>
           </table>
         </div>
@@ -344,6 +397,7 @@
           class="btn-produk"
           data-aos="fade-right"
           data-aos-duration="800"
+          data-i18n="downloadBrochure"
         >
           Download Brosur
         </a>
@@ -354,17 +408,29 @@
           data-aos="fade-left"
           data-aos-delay="200"
           data-aos-duration="800"
+          data-i18n="askPrice"
         >
           Tanya Harga
         </a>
       </div>
     </section>
-    <!-- Produk -->
+
+    <!-- ============================= -->
+    <!-- PRODUK -->
+    <!-- ============================= -->
 
     <section id="produk" class="produk">
       <div class="judul-produk">
-        <h2 data-aos="fade-up" data-aos-duration="1000">Produk Kami</h2>
-        <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+        <h2 data-aos="fade-up" data-aos-duration="1000" data-i18n="ourProducts">
+          Produk Kami
+        </h2>
+
+        <p
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+          data-i18n="productDescription"
+        >
           Master Baja Bangunan menyediakan berbagai kebutuhan material bangunan
           berkualitas untuk rumah, ruko, gedung hingga proyek konstruksi.
         </p>
@@ -373,60 +439,84 @@
       <div class="produk-grid" data-aos="fade-up">
         <div class="card" data-aos="fade-up" data-aos-delay="200">
           <img src="images/produk/semen.jpg" alt="Semen" />
-          <h3>Semen</h3>
+
+          <h3 data-i18n="cement">Semen</h3>
         </div>
 
         <div class="card" data-aos="fade-up" data-aos-delay="300">
           <img src="images/produk/hebel.jpg" alt="Hebel" />
-          <h3>Hebel</h3>
+
+          <h3 data-i18n="hebel">Hebel</h3>
         </div>
 
         <div class="card" data-aos="fade-up" data-aos-delay="400">
           <img src="images/produk/bata-merah.jpg" alt="Bata Merah" />
-          <h3>Bata Merah</h3>
+
+          <h3 data-i18n="redBrick">Bata Merah</h3>
         </div>
 
         <div class="card" data-aos="fade-up" data-aos-delay="500">
           <img src="images/produk/besi-beton.jpg" alt="Besi Beton" />
-          <h3>Besi Beton</h3>
+
+          <h3 data-i18n="concreteIron">Besi Beton</h3>
         </div>
 
         <div class="card" data-aos="fade-up" data-aos-delay="600">
           <img src="images/produk/baja-ringan.jpg" alt="Baja Ringan" />
-          <h3>Baja Ringan</h3>
+
+          <h3 data-i18n="lightSteel">Baja Ringan</h3>
         </div>
 
         <div class="card" data-aos="fade-up" data-aos-delay="700">
           <img src="images/produk/keramik.jpg" alt="Keramik" />
-          <h3>Keramik</h3>
+
+          <h3 data-i18n="ceramic">Keramik</h3>
         </div>
 
         <div class="card" data-aos="fade-up" data-aos-delay="800">
-          <img src="images/produk/bondek&spandek.jpg" alt="bondek&spandek" />
-          <h3>bondek&spandek</h3>
+          <img src="images/produk/bondek&spandek.jpg" alt="Bondek & Spandek" />
+
+          <h3 data-i18n="bondekSpandek">Bondek & Spandek</h3>
         </div>
 
         <div class="card" data-aos="fade-up" data-aos-delay="900">
-          <img src="images/produk/triplek&grc.jpg" alt="triplek&grc" />
-          <h3>triplek&grc</h3>
+          <img src="images/produk/triplek&grc.jpg" alt="Triplek & GRC" />
+
+          <h3 data-i18n="plywoodGrc">Triplek & GRC</h3>
         </div>
       </div>
     </section>
-    <!-- Tentang -->
+
+    <!-- ============================= -->
+    <!-- TENTANG -->
+    <!-- ============================= -->
+
     <section id="Tentang" class="Tentang">
       <div class="Tentang-container">
         <div class="Tentang-text">
-          <h2 data-aos="fade-down" data-aos-duration="1000">
+          <h2
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-i18n="aboutTitle"
+          >
             Tentang Master Baja Bangunan
           </h2>
 
-          <p data-aos="fade-right" data-aos-duration="1200">
+          <p
+            data-aos="fade-right"
+            data-aos-duration="1200"
+            data-i18n="aboutParagraph1"
+          >
             Master Baja Bangunan merupakan pusat penjualan bahan bangunan yang
             berlokasi di Jl. Cisoka–Megu, Cempaka, Kecamatan Cisoka, Kabupaten
             Tangerang, Banten.
           </p>
 
-          <p data-aos="fade-left" data-aos-duration="1200">
+          <p
+            data-aos="fade-left"
+            data-aos-duration="1200"
+            data-i18n="aboutParagraph2"
+          >
             Didirikan pada tahun 2018, Master Baja Bangunan hadir sebagai pusat
             penjualan bahan bangunan yang menyediakan berbagai kebutuhan
             material konstruksi secara lengkap. Dengan pengalaman melayani
@@ -439,71 +529,129 @@
           </p>
 
           <div class="keunggulan">
-            <div data-aos="zoom-in" data-aos-delay="100">✅ Produk Lengkap</div>
+            <div
+              data-aos="zoom-in"
+              data-aos-delay="100"
+              data-i18n="completeProducts"
+            >
+              ✅ Produk Lengkap
+            </div>
 
-            <div data-aos="zoom-in" data-aos-delay="200">
+            <div
+              data-aos="zoom-in"
+              data-aos-delay="200"
+              data-i18n="competitivePrices"
+            >
               ✅ Harga Kompetitif
             </div>
 
-            <div data-aos="zoom-in" data-aos-delay="300">
+            <div
+              data-aos="zoom-in"
+              data-aos-delay="300"
+              data-i18n="retailWholesale"
+            >
               ✅ Melayani Ecer & Grosir
             </div>
 
-            <div data-aos="zoom-in" data-aos-delay="400">
+            <div
+              data-aos="zoom-in"
+              data-aos-delay="400"
+              data-i18n="fastDelivery"
+            >
               ✅ Pengiriman Cepat
             </div>
 
-            <div data-aos="zoom-in" data-aos-delay="500">
+            <div
+              data-aos="zoom-in"
+              data-aos-delay="500"
+              data-i18n="projectReady"
+            >
               ✅ Siap Melayani Proyek
             </div>
 
-            <div data-aos="zoom-in" data-aos-delay="600">
+            <div
+              data-aos="zoom-in"
+              data-aos-delay="600"
+              data-i18n="friendlyService"
+            >
               ✅ Pelayanan Ramah
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- ============================= -->
+    <!-- LOKASI -->
+    <!-- ============================= -->
+
     <section id="Lokasi" class="lokasi">
-      <h2 data-aos="fade-down">Lokasi Kami</h2>
+      <h2 data-aos="fade-down" data-i18n="ourLocation">Lokasi Kami</h2>
 
       <p data-aos="fade-right" data-aos-delay="200">
-        <strong>Alamat :</strong><br />
-        Jl. Cisoka–Megu, Cempaka,<br />
-        Kecamatan Cisoka,<br />
-        Kabupaten Tangerang,<br />
+        <strong data-i18n="address"> Alamat : </strong>
+
+        <br />
+
+        Jl. Cisoka–Megu, Cempaka,
+        <br />
+        <span data-i18n="cisokaDistrict"> Kecamatan Cisoka, </span>
+
+        <br />
+        <span data-i18n="tangerangRegency"> Kabupaten Tangerang, </span>
+
+        <br />
         Banten 15730
       </p>
 
       <p data-aos="fade-right" data-aos-delay="300">
-        <strong>📞 WhatsApp :</strong><br />
+        <strong data-i18n="whatsapp"> 📞 WhatsApp : </strong>
+
+        <br />
+
         0812-1364-8808
       </p>
 
       <p data-aos="fade-right" data-aos-delay="400">
-        <strong>🕘 Jam Operasional :</strong><br />
-        Setiap Hari : 07.00–17.00 WIB
+        <strong data-i18n="operatingHours"> 🕘 Jam Operasional : </strong>
+
+        <br />
+
+        <span data-i18n="everyDay"> Setiap Hari </span>
+
+        : 07.00–17.00 WIB
       </p>
 
       <div class="lokasi-wrapper">
         <div class="lokasi-info" data-aos="fade-right" data-aos-duration="1000">
-          <h3>📍 Kunjungi Toko Kami</h3>
+          <h3 data-i18n="visitStore">📍 Kunjungi Toko Kami</h3>
 
           <p>
-            Datang langsung ke <strong>Master Baja Bangunan</strong> untuk
-            melihat berbagai kebutuhan material bangunan berkualitas dengan
-            harga yang kompetitif.
+            <span data-i18n="visitDescriptionBefore"> Datang langsung ke </span>
+
+            <strong> Master Baja Bangunan </strong>
+
+            <span data-i18n="visitDescriptionAfter">
+              untuk melihat berbagai kebutuhan material bangunan berkualitas
+              dengan harga yang kompetitif.
+            </span>
           </p>
 
           <a
             href="https://maps.google.com/?q=Master+Baja+Bangunan"
             target="_blank"
             class="btn-maps"
+            data-i18n="openGoogleMaps"
           >
             📍 Buka di Google Maps
           </a>
 
-          <a href="https://wa.me/6281213648808" target="_blank" class="btn-wa">
+          <a
+            href="https://wa.me/6281213648808"
+            target="_blank"
+            class="btn-wa"
+            data-i18n="chatWhatsapp"
+          >
             💬 Chat WhatsApp
           </a>
         </div>
@@ -527,27 +675,42 @@
         </div>
       </div>
     </section>
-    <!-- Informasi Tambahan -->
+
+    <!-- ============================= -->
+    <!-- INFORMASI TAMBAHAN -->
+    <!-- ============================= -->
 
     <section class="info-tambahan">
-      <h2 data-aos="fade-down">Ikuti Kami & Metode Pembayaran</h2>
+      <h2 data-aos="fade-down" data-i18n="followPayment">
+        Ikuti Kami & Metode Pembayaran
+      </h2>
 
       <div class="info-grid">
+        <!-- SOCIAL MEDIA -->
+
         <div class="info-card" data-aos="fade-right" data-aos-duration="1000">
-          <h3>📱 Media Sosial</h3>
+          <h3 data-i18n="socialMedia">📱 Media Sosial</h3>
 
           <p>
-            <strong>Instagram</strong><br />
+            <strong data-i18n="instagram"> Instagram </strong>
+
+            <br />
+
             <a href="https://instagram.com/tb.mbb" target="_blank"> @tb.mbb </a>
           </p>
 
           <p>
-            <strong>TikTok</strong><br />
+            <strong data-i18n="tiktok"> TikTok </strong>
+
+            <br />
+
             <a href="https://www.tiktok.com/@masterbaja" target="_blank">
               @masterbaja
             </a>
           </p>
         </div>
+
+        <!-- PAYMENT -->
 
         <div
           class="info-card"
@@ -555,53 +718,466 @@
           data-aos-delay="300"
           data-aos-duration="1000"
         >
-          <h3>💳 Metode Pembayaran</h3>
+          <h3 data-i18n="paymentMethods">💳 Metode Pembayaran</h3>
 
           <ul>
-            <li>✅ Cash</li>
-            <li>✅ Transfer Bank</li>
+            <li data-i18n="cash">✅ Cash</li>
+
+            <li data-i18n="bankTransfer">✅ Transfer Bank</li>
+
             <li>✅ QRIS</li>
-            <li>✅ Kartu Debit</li>
-            <li>✅ Kartu Kredit</li>
+
+            <li data-i18n="debitCard">✅ Kartu Debit</li>
+
+            <li data-i18n="creditCard">✅ Kartu Kredit</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ============================= -->
+    <!-- FOOTER -->
+    <!-- ============================= -->
+
     <footer class="footer">
       <p data-aos="fade-down">
-        © 2026 Master Baja Bangunan. All Rights Reserved.
+        © 2026 Master Baja Bangunan.
+        <span data-i18n="allRights"> All Rights Reserved. </span>
       </p>
 
       <p class="developer" data-aos="fade-up" data-aos-delay="200">
-        Designed & Developed by
-        <strong>Feddro Budiman</strong><br />
+        <span data-i18n="designedDeveloped"> Designed & Developed by </span>
+
+        <strong> Feddro Budiman </strong>
+
+        <br />
+
         Web Developer • Automation • AI Solutions
       </p>
 
       <p class="footer-phone">
         <i class="fa-solid fa-mobile-screen-button"></i>
+
         ☎️/📱 0812-9720-2638
       </p>
 
       <div class="visitor-counter">
-        <p>👥 Total Visitor: <span id="totalVisitors">0</span></p>
-        <p>📅 Hari Ini: <span id="todayVisitors">0</span></p>
-        <p>🟢 Online: <span id="onlineVisitors">0</span></p>
+        <p>
+          👥
+          <span data-i18n="totalVisitor"> Total Visitor: </span>
+
+          <span id="totalVisitors"> 0 </span>
+        </p>
+
+        <p>
+          📅
+          <span data-i18n="today"> Hari Ini: </span>
+
+          <span id="todayVisitors"> 0 </span>
+        </p>
+
+        <p>
+          🟢
+          <span data-i18n="online"> Online: </span>
+
+          <span id="onlineVisitors"> 0 </span>
+        </p>
       </div>
     </footer>
 
+    <!-- ============================= -->
+    <!-- SCRIPTS -->
+    <!-- ============================= -->
+
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
     <script src="js/visitor.js"></script>
+
     <script src="js/script.js"></script>
+
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- ============================= -->
+    <!-- AOS -->
+    <!-- ============================= -->
 
     <script>
       AOS.init({
         duration: 1000,
         once: true,
         offset: 120,
+      });
+    </script>
+
+    <!-- ============================= -->
+    <!-- LANGUAGE SYSTEM -->
+    <!-- ============================= -->
+
+    <script>
+      const translations = {
+        id: {
+          home: "Beranda",
+          products: "Produk",
+          priceList: "Daftar Harga",
+          about: "Tentang",
+          location: "Lokasi",
+          chatWhatsapp: "Chat WhatsApp",
+
+          heroSubtitle: "PUSAT PENJUALAN BAHAN BANGUNAN",
+
+          heroTagline: "Distributor Melayani Ecer",
+
+          heroDescription: "Solusi Lengkap Kebutuhan Material Bangunan Anda.",
+
+          weSell: "Menjual:",
+
+          viewProducts: "Lihat Produk",
+
+          latestPrices: "Daftar Harga Terbaru",
+
+          priceNotice:
+            "Harga dapat berubah sewaktu-waktu. Hubungi kami untuk mendapatkan harga terbaru.",
+
+          structureFoundation: "🏗 Struktur & Pondasi",
+
+          roofing: "🏠 Atap & Penutup",
+
+          lightweightBrick: "Bata Ringan",
+
+          cement: "Semen JKT",
+
+          sand: "Pasir",
+
+          split: "Split",
+
+          concreteIron: "Besi Beton",
+
+          bondek: "Bondek",
+
+          spandek: "Spandek",
+
+          pvcRoof: "Atap PVC Single Layer",
+
+          ceramic: "Keramik",
+
+          cementPrice: "Mulai Rp39.500/Sak",
+
+          concreteIronPrice: "Mulai Rp27.500/Btg",
+
+          bondekPrice: "Mulai Rp77.000/M",
+
+          spandekPrice: "Mulai Rp38.500/M",
+
+          pvcRoofPrice: "Mulai Rp64.500/M",
+
+          ceramicPrice: "Mulai Rp59.500/Dus",
+
+          downloadBrochure: "Download Brosur",
+
+          askPrice: "Tanya Harga",
+
+          ourProducts: "Produk Kami",
+
+          productDescription:
+            "Master Baja Bangunan menyediakan berbagai kebutuhan material bangunan berkualitas untuk rumah, ruko, gedung hingga proyek konstruksi.",
+
+          hebel: "Hebel",
+
+          redBrick: "Bata Merah",
+
+          lightSteel: "Baja Ringan",
+
+          bondekSpandek: "Bondek & Spandek",
+
+          plywoodGrc: "Triplek & GRC",
+
+          aboutTitle: "Tentang Master Baja Bangunan",
+
+          aboutParagraph1:
+            "Master Baja Bangunan merupakan pusat penjualan bahan bangunan yang berlokasi di Jl. Cisoka–Megu, Cempaka, Kecamatan Cisoka, Kabupaten Tangerang, Banten.",
+
+          aboutParagraph2:
+            "Didirikan pada tahun 2018, Master Baja Bangunan hadir sebagai pusat penjualan bahan bangunan yang menyediakan berbagai kebutuhan material konstruksi secara lengkap. Dengan pengalaman melayani pelanggan individu, kontraktor, hingga proyek berskala besar, kami terus berkomitmen menghadirkan produk berkualitas, pelayanan profesional, harga yang kompetitif, serta pengiriman yang cepat dan aman. Kepercayaan pelanggan menjadi fondasi utama dalam setiap langkah kami untuk terus berkembang dan memberikan pelayanan terbaik.",
+
+          completeProducts: "✅ Produk Lengkap",
+
+          competitivePrices: "✅ Harga Kompetitif",
+
+          retailWholesale: "✅ Melayani Ecer & Grosir",
+
+          fastDelivery: "✅ Pengiriman Cepat",
+
+          projectReady: "✅ Siap Melayani Proyek",
+
+          friendlyService: "✅ Pelayanan Ramah",
+
+          ourLocation: "Lokasi Kami",
+
+          address: "Alamat :",
+
+          cisokaDistrict: "Kecamatan Cisoka,",
+
+          tangerangRegency: "Kabupaten Tangerang,",
+
+          whatsapp: "📞 WhatsApp :",
+
+          operatingHours: "🕘 Jam Operasional :",
+
+          everyDay: "Setiap Hari",
+
+          visitStore: "📍 Kunjungi Toko Kami",
+
+          visitDescriptionBefore: "Datang langsung ke",
+
+          visitDescriptionAfter:
+            "untuk melihat berbagai kebutuhan material bangunan berkualitas dengan harga yang kompetitif.",
+
+          openGoogleMaps: "📍 Buka di Google Maps",
+
+          followPayment: "Ikuti Kami & Metode Pembayaran",
+
+          socialMedia: "📱 Media Sosial",
+
+          instagram: "Instagram",
+
+          tiktok: "TikTok",
+
+          paymentMethods: "💳 Metode Pembayaran",
+
+          cash: "✅ Cash",
+
+          bankTransfer: "✅ Transfer Bank",
+
+          debitCard: "✅ Kartu Debit",
+
+          creditCard: "✅ Kartu Kredit",
+
+          allRights: "All Rights Reserved.",
+
+          designedDeveloped: "Designed & Developed by",
+
+          totalVisitor: "Total Visitor:",
+
+          today: "Hari Ini:",
+
+          online: "Online:",
+        },
+
+        en: {
+          home: "Home",
+
+          products: "Products",
+
+          priceList: "Price List",
+
+          about: "About",
+
+          location: "Location",
+
+          chatWhatsapp: "Chat on WhatsApp",
+
+          heroSubtitle: "BUILDING MATERIALS SALES CENTER",
+
+          heroTagline: "Distributor Serving Retail Customers",
+
+          heroDescription:
+            "Complete Solutions for Your Building Material Needs.",
+
+          weSell: "We Sell:",
+
+          viewProducts: "View Products",
+
+          latestPrices: "Latest Price List",
+
+          priceNotice:
+            "Prices are subject to change. Contact us for the latest prices.",
+
+          structureFoundation: "🏗 Structure & Foundation",
+
+          roofing: "🏠 Roofing & Covering",
+
+          lightweightBrick: "Lightweight Brick",
+
+          cement: "JKT Cement",
+
+          sand: "Sand",
+
+          split: "Crushed Stone",
+
+          concreteIron: "Reinforcing Steel",
+
+          bondek: "Bondek",
+
+          spandek: "Spandek",
+
+          pvcRoof: "Single Layer PVC Roof",
+
+          ceramic: "Ceramic Tiles",
+
+          cementPrice: "From Rp39,500/Bag",
+
+          concreteIronPrice: "From Rp27,500/Piece",
+
+          bondekPrice: "From Rp77,000/M",
+
+          spandekPrice: "From Rp38,500/M",
+
+          pvcRoofPrice: "From Rp64,500/M",
+
+          ceramicPrice: "From Rp59,500/Box",
+
+          downloadBrochure: "Download Brochure",
+
+          askPrice: "Ask for a Quote",
+
+          ourProducts: "Our Products",
+
+          productDescription:
+            "Master Baja Bangunan provides a wide range of quality building materials for houses, commercial buildings, offices and construction projects.",
+
+          hebel: "Lightweight AAC Block",
+
+          redBrick: "Red Brick",
+
+          lightSteel: "Lightweight Steel",
+
+          bondekSpandek: "Bondek & Spandek",
+
+          plywoodGrc: "Plywood & GRC",
+
+          aboutTitle: "About Master Baja Bangunan",
+
+          aboutParagraph1:
+            "Master Baja Bangunan is a building materials sales center located on Jl. Cisoka–Megu, Cempaka, Cisoka District, Tangerang Regency, Banten.",
+
+          aboutParagraph2:
+            "Established in 2018, Master Baja Bangunan serves as a comprehensive building materials center providing a wide range of construction materials. With experience serving individual customers, contractors and large-scale projects, we remain committed to providing quality products, professional service, competitive prices, and fast and reliable delivery. Customer trust is the foundation of everything we do as we continue to grow and provide the best service.",
+
+          completeProducts: "✅ Complete Product Selection",
+
+          competitivePrices: "✅ Competitive Prices",
+
+          retailWholesale: "✅ Retail & Wholesale",
+
+          fastDelivery: "✅ Fast Delivery",
+
+          projectReady: "✅ Ready for Projects",
+
+          friendlyService: "✅ Friendly Service",
+
+          ourLocation: "Our Location",
+
+          address: "Address:",
+
+          cisokaDistrict: "Cisoka District,",
+
+          tangerangRegency: "Tangerang Regency,",
+
+          whatsapp: "📞 WhatsApp:",
+
+          operatingHours: "🕘 Business Hours:",
+
+          everyDay: "Every Day",
+
+          visitStore: "📍 Visit Our Store",
+
+          visitDescriptionBefore: "Visit",
+
+          visitDescriptionAfter:
+            "directly to explore a wide range of quality building materials at competitive prices.",
+
+          openGoogleMaps: "📍 Open in Google Maps",
+
+          followPayment: "Follow Us & Payment Methods",
+
+          socialMedia: "📱 Social Media",
+
+          instagram: "Instagram",
+
+          tiktok: "TikTok",
+
+          paymentMethods: "💳 Payment Methods",
+
+          cash: "✅ Cash",
+
+          bankTransfer: "✅ Bank Transfer",
+
+          debitCard: "✅ Debit Card",
+
+          creditCard: "✅ Credit Card",
+
+          allRights: "All Rights Reserved.",
+
+          designedDeveloped: "Designed & Developed by",
+
+          totalVisitor: "Total Visitors:",
+
+          today: "Today:",
+
+          online: "Online:",
+        },
+      };
+
+      // =====================================
+      // CHANGE LANGUAGE
+      // =====================================
+
+      function changeLanguage(language) {
+        const selectedTranslations = translations[language];
+
+        if (!selectedTranslations) {
+          return;
+        }
+
+        document.querySelectorAll("[data-i18n]").forEach((element) => {
+          const key = element.getAttribute("data-i18n");
+
+          if (selectedTranslations[key] !== undefined) {
+            element.textContent = selectedTranslations[key];
+          }
+        });
+
+        // Change HTML language
+        document.documentElement.lang = language === "en" ? "en-US" : "id";
+
+        // Save language
+        localStorage.setItem("selectedLanguage", language);
+
+        // Active button
+
+        const idButton = document.getElementById("idLang");
+
+        const enButton = document.getElementById("enLang");
+
+        if (idButton) {
+          idButton.classList.toggle("active", language === "id");
+        }
+
+        if (enButton) {
+          enButton.classList.toggle("active", language === "en");
+        }
+      }
+
+      // =====================================
+      // LANGUAGE BUTTONS
+      // =====================================
+
+      document
+        .getElementById("idLang")
+        ?.addEventListener("click", () => changeLanguage("id"));
+
+      document
+        .getElementById("enLang")
+        ?.addEventListener("click", () => changeLanguage("en"));
+
+      // =====================================
+      // LOAD SAVED LANGUAGE
+      // =====================================
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const savedLanguage = localStorage.getItem("selectedLanguage") || "id";
+
+        changeLanguage(savedLanguage);
       });
     </script>
   </body>
