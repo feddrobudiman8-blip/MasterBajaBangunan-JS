@@ -6,37 +6,68 @@ Deno.serve(async (req) => {
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
   );
 
+  // Ambil IP visitor
   const ip =
-    req.headers.get("x-forwarded-for")?.split(",")[0] ||
+    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
     "unknown";
 
   const now = new Date().toISOString();
 
-  // Cari visitor berdasarkan IP
-  const { data: visitor } = await supabase
+  // Cek apakah IP sudah ada
+  const { data: existingVisitor, error: findError } = await supabase
     .from("visitors")
-    .select("*")
+    .select("id, ip")
     .eq("ip", ip)
     .maybeSingle();
 
-  if (visitor) {
-    await supabase
+  if (findError) {
+    console.error("Gagal mencari visitor:", findError);
+
+    return new Response(
+      JSON.stringify({
+        error: "Gagal mencari visitor",
+      }),
+      {
+        status: 500,
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+      }
+    );
+  }
+
+  // Kalau IP sudah ada → update last_seen
+  if (existingVisitor) {
+    const { error: updateError } = await supabase
       .from("visitors")
       .update({
         last_seen: now,
       })
-      .eq("id", visitor.id);
+      .eq("id", existingVisitor.id);
+
+    if (updateError) {
+      console.error("Gagal update visitor:", updateError);
+    }
   } else {
-    await supabase
+    // Kalau IP belum ada → buat visitor baru
+    const { error: insertError } = await supabase
       .from("visitors")
       .insert({
         ip,
         created_at: now,
         last_seen: now,
       });
+
+    if (insertError) {
+      console.error("Gagal insert visitor:", insertError);
+    }
   }
 
-  // Total visitor
+  // =========================
+  // TOTAL VISITOR UNIK
+  // =========================
+
   const { count: total } = await supabase
     .from("visitors")
     .select("*", {
@@ -44,7 +75,10 @@ Deno.serve(async (req) => {
       head: true,
     });
 
-  // Visitor hari ini
+  // =========================
+  // VISITOR HARI INI
+  // =========================
+
   const today = new Date().toISOString().split("T")[0];
 
   const { count: todayCount } = await supabase
@@ -55,7 +89,11 @@ Deno.serve(async (req) => {
     })
     .gte("created_at", today);
 
-  // Visitor online (aktif 5 menit terakhir)
+  // =========================
+  // VISITOR ONLINE
+  // AKTIF 5 MENIT TERAKHIR
+  // =========================
+
   const fiveMinutesAgo = new Date(
     Date.now() - 5 * 60 * 1000
   ).toISOString();
@@ -70,9 +108,9 @@ Deno.serve(async (req) => {
 
   return new Response(
     JSON.stringify({
-      total,
-      today: todayCount,
-      online,
+      total: total ?? 0,
+      today: todayCount ?? 0,
+      online: online ?? 0,
     }),
     {
       headers: {
