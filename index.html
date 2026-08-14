@@ -35,7 +35,9 @@
     <!-- ============================= -->
 
     <link rel="icon" type="image/png" href="favicon.png" />
+
     <link rel="shortcut icon" href="favicon.png" />
+
     <link rel="apple-touch-icon" href="favicon.png" />
 
     <!-- ============================= -->
@@ -43,6 +45,7 @@
     <!-- ============================= -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
@@ -215,23 +218,23 @@
 
         <ul class="menu">
           <li>
-            <a href="#home" data-i18n="home">Beranda</a>
+            <a href="#home" data-i18n="home"> Beranda </a>
           </li>
 
           <li>
-            <a href="#produk" data-i18n="products">Produk</a>
+            <a href="#produk" data-i18n="products"> Produk </a>
           </li>
 
           <li>
-            <a href="#harga" data-i18n="priceList">Daftar Harga</a>
+            <a href="#harga" data-i18n="priceList"> Daftar Harga </a>
           </li>
 
           <li>
-            <a href="#Tentang" data-i18n="about">Tentang</a>
+            <a href="#Tentang" data-i18n="about"> Tentang </a>
           </li>
 
           <li>
-            <a href="#Lokasi" data-i18n="location">Lokasi</a>
+            <a href="#Lokasi" data-i18n="location"> Lokasi </a>
           </li>
         </ul>
 
@@ -692,8 +695,6 @@
       </h2>
 
       <div class="info-grid">
-        <!-- SOCIAL MEDIA -->
-
         <div class="info-card" data-aos="fade-right" data-aos-duration="1000">
           <h3 data-i18n="socialMedia">📱 Media Sosial</h3>
 
@@ -715,8 +716,6 @@
             </a>
           </p>
         </div>
-
-        <!-- PAYMENT -->
 
         <div
           class="info-card"
@@ -753,22 +752,34 @@
         aria-label="Tanya AI"
       >
         🤖
-        <span>Tanya AI</span>
+
+        <!--
+          !important dipakai agar tulisan tetap terlihat
+          meskipun CSS mobile menyembunyikan span.
+        -->
+
+        <span id="aiChatButtonText" style="display: inline !important">
+          Tanya AI
+        </span>
       </button>
 
       <div id="aiChatBox" class="ai-chat-box">
         <div class="ai-chat-header">
           <div>
-            <strong>🤖 Master Baja AI</strong>
-            <small>Asisten kebutuhan material bangunan</small>
+            <strong id="aiChatTitle"> 🤖 Master Baja AI </strong>
+
+            <small id="aiChatSubtitle">
+              Asisten kebutuhan material bangunan
+            </small>
           </div>
 
           <button id="aiChatClose" type="button" aria-label="Tutup">×</button>
         </div>
 
         <div id="aiChatMessages" class="ai-chat-messages">
-          <div class="ai-message">
-            Halo 👋 Saya <strong>Master Baja AI</strong>.
+          <div class="ai-message" id="aiWelcomeMessage">
+            Halo 👋 Saya
+            <strong> Master Baja AI </strong>.
 
             <br /><br />
 
@@ -779,7 +790,9 @@
             <br /><br />
 
             Contoh:
+
             <br />
+
             <em>
               "Saya mau bangun rumah ukuran 6 × 10 meter, kira-kira butuh berapa
               semen dan pasir?"
@@ -854,20 +867,28 @@
     </footer>
 
     <!-- ============================= -->
-    <!-- SCRIPTS -->
+    <!-- SUPABASE -->
     <!-- ============================= -->
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
+    <!-- ============================= -->
+    <!-- VISITOR -->
+    <!-- ============================= -->
+
     <script src="js/visitor.js"></script>
 
-    <script src="js/script.js"></script>
+    <!-- ============================= -->
+    <!-- MAIN SCRIPT -->
+    <!-- ============================= -->
 
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/script.js"></script>
 
     <!-- ============================= -->
     <!-- AOS -->
     <!-- ============================= -->
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
     <script>
       AOS.init({
@@ -877,19 +898,52 @@
       });
     </script>
 
-    <!-- ============================= -->
+    <!-- ===================================================== -->
     <!-- LANGUAGE SYSTEM -->
-    <!-- ============================= -->
+    <!-- ===================================================== -->
 
     <script>
       const translations = {
+        /* ================================================= */
+        /* INDONESIAN */
+        /* ================================================= */
+
         id: {
+          /* AI */
+
+          aiButton: "Tanya AI",
+
+          aiTitle: "🤖 Master Baja AI",
+
+          aiSubtitle: "Asisten kebutuhan material bangunan",
+
+          aiPlaceholder: "Tulis pertanyaan Anda...",
+
+          aiGreeting: "Halo 👋 Saya <strong>Master Baja AI</strong>.",
+
+          aiDescription:
+            "Saya bisa membantu memperkirakan kebutuhan material bangunan seperti semen, pasir, bata ringan, besi beton, baja ringan, dan material lainnya.",
+
+          aiExampleLabel: "Contoh:",
+
+          aiExample:
+            '"Saya mau bangun rumah ukuran 6 × 10 meter, kira-kira butuh berapa semen dan pasir?"',
+
+          /* NAVIGATION */
+
           home: "Beranda",
+
           products: "Produk",
+
           priceList: "Daftar Harga",
+
           about: "Tentang",
+
           location: "Lokasi",
+
           chatWhatsapp: "Chat WhatsApp",
+
+          /* HERO */
 
           heroSubtitle: "PUSAT PENJUALAN BAHAN BANGUNAN",
 
@@ -903,6 +957,8 @@
             "Semen • Hebel • Bata Merah • Pasir • Batu Kali • Split • Abu Gunung • Besi Beton • Behel jadi • Wiremesh • Cakar ayam • Gypsum • GRC • ListPlank • Baja Ringan • Besi Hollow • Pipa besi • Bondek • Besi Siku • Besi UNP & CNP • Paralon • Triplek • Keramik • Granit • Paving Block • Kayu Kaso • Kayu Papancor • Tangki Air • Atap Double Layer • Atap Single Layer • Spandek Polos • Spandek Pasir • DLL...",
 
           viewProducts: "Lihat Produk",
+
+          /* PRICE */
 
           latestPrices: "Daftar Harga Terbaru",
 
@@ -947,6 +1003,8 @@
 
           askPrice: "Tanya Harga",
 
+          /* PRODUCTS */
+
           ourProducts: "Produk Kami",
 
           productDescription:
@@ -961,6 +1019,8 @@
           bondekSpandek: "Bondek & Spandek",
 
           plywoodGrc: "Triplek & GRC",
+
+          /* ABOUT */
 
           aboutTitle: "Tentang Master Baja Bangunan",
 
@@ -981,6 +1041,8 @@
           projectReady: "✅ Siap Melayani Proyek",
 
           friendlyService: "✅ Pelayanan Ramah",
+
+          /* LOCATION */
 
           ourLocation: "Lokasi Kami",
 
@@ -1005,6 +1067,8 @@
 
           openGoogleMaps: "📍 Buka di Google Maps",
 
+          /* SOCIAL */
+
           followPayment: "Ikuti Kami & Metode Pembayaran",
 
           socialMedia: "📱 Media Sosial",
@@ -1023,6 +1087,8 @@
 
           creditCard: "✅ Kartu Kredit",
 
+          /* FOOTER */
+
           allRights: "All Rights Reserved.",
 
           designedDeveloped: "Designed & Developed by",
@@ -1034,7 +1100,33 @@
           online: "Online:",
         },
 
+        /* ================================================= */
+        /* ENGLISH */
+        /* ================================================= */
+
         en: {
+          /* AI */
+
+          aiButton: "Ask AI",
+
+          aiTitle: "🤖 Master Baja AI",
+
+          aiSubtitle: "Building material assistant",
+
+          aiPlaceholder: "Type your question...",
+
+          aiGreeting: "Hello 👋 I'm <strong>Master Baja AI</strong>.",
+
+          aiDescription:
+            "I can help estimate building material requirements such as cement, sand, lightweight blocks, reinforcing steel, lightweight steel, and other materials.",
+
+          aiExampleLabel: "Example:",
+
+          aiExample:
+            '"I want to build a 6 × 10 meter house. Approximately how much cement and sand do I need?"',
+
+          /* NAVIGATION */
+
           home: "Home",
 
           products: "Products",
@@ -1046,6 +1138,8 @@
           location: "Location",
 
           chatWhatsapp: "Chat on WhatsApp",
+
+          /* HERO */
 
           heroSubtitle: "BUILDING MATERIALS SALES CENTER",
 
@@ -1060,6 +1154,8 @@
             "Cement • Lightweight AAC Block • Red Brick • Sand • River Stone • Crushed Stone • Volcanic Ash • Reinforcing Steel • Ready-Made Stirrup • Wiremesh • Foundation Rebar • Gypsum • GRC • Plank Board • Lightweight Steel • Hollow Steel • Steel Pipe • Floor Deck • Angle Bar • UNP & CNP Steel • PVC Pipe • Plywood • Ceramic Tiles • Granite • Paving Blocks • Wood • Water Tanks • Double Layer Roofing • Single Layer Roofing • Plain Metal Roofing Sheet • Sand-Finish Metal Roofing Sheet • And More...",
 
           viewProducts: "View Products",
+
+          /* PRICE */
 
           latestPrices: "Latest Price List",
 
@@ -1104,6 +1200,8 @@
 
           askPrice: "Ask for a Quote",
 
+          /* PRODUCTS */
+
           ourProducts: "Our Products",
 
           productDescription:
@@ -1118,6 +1216,8 @@
           bondekSpandek: "Floor Deck & Metal Roofing Sheet",
 
           plywoodGrc: "Plywood & GRC",
+
+          /* ABOUT */
 
           aboutTitle: "About Master Baja Bangunan",
 
@@ -1138,6 +1238,8 @@
           projectReady: "✅ Ready for Projects",
 
           friendlyService: "✅ Friendly Service",
+
+          /* LOCATION */
 
           ourLocation: "Our Location",
 
@@ -1162,6 +1264,8 @@
 
           openGoogleMaps: "📍 Open in Google Maps",
 
+          /* SOCIAL */
+
           followPayment: "Follow Us & Payment Methods",
 
           socialMedia: "📱 Social Media",
@@ -1180,6 +1284,8 @@
 
           creditCard: "✅ Credit Card",
 
+          /* FOOTER */
+
           allRights: "All Rights Reserved.",
 
           designedDeveloped: "Designed & Developed by",
@@ -1192,9 +1298,9 @@
         },
       };
 
-      // =====================================
+      // =====================================================
       // CHANGE LANGUAGE
-      // =====================================
+      // =====================================================
 
       function changeLanguage(language) {
         const selectedTranslations = translations[language];
@@ -1202,6 +1308,10 @@
         if (!selectedTranslations) {
           return;
         }
+
+        // ================================================
+        // WEBSITE TRANSLATION
+        // ================================================
 
         document.querySelectorAll("[data-i18n]").forEach((element) => {
           const key = element.getAttribute("data-i18n");
@@ -1211,13 +1321,84 @@
           }
         });
 
-        // Change HTML language
+        // ================================================
+        // HTML LANGUAGE
+        // ================================================
+
         document.documentElement.lang = language === "en" ? "en-US" : "id";
 
-        // Save language
+        // ================================================
+        // SAVE LANGUAGE
+        // ================================================
+
         localStorage.setItem("selectedLanguage", language);
 
-        // Active button
+        // ================================================
+        // AI CHAT TRANSLATION
+        // ================================================
+
+        const aiButtonText = document.getElementById("aiChatButtonText");
+
+        const aiTitle = document.getElementById("aiChatTitle");
+
+        const aiSubtitle = document.getElementById("aiChatSubtitle");
+
+        const aiInput = document.getElementById("aiChatInput");
+
+        const aiWelcome = document.getElementById("aiWelcomeMessage");
+
+        // AI BUTTON
+
+        if (aiButtonText) {
+          aiButtonText.textContent = selectedTranslations.aiButton;
+        }
+
+        // AI TITLE
+
+        if (aiTitle) {
+          aiTitle.textContent = selectedTranslations.aiTitle;
+        }
+
+        // AI SUBTITLE
+
+        if (aiSubtitle) {
+          aiSubtitle.textContent = selectedTranslations.aiSubtitle;
+        }
+
+        // AI INPUT PLACEHOLDER
+
+        if (aiInput) {
+          aiInput.placeholder = selectedTranslations.aiPlaceholder;
+        }
+
+        // AI WELCOME MESSAGE
+
+        if (aiWelcome) {
+          aiWelcome.innerHTML = `
+
+            ${selectedTranslations.aiGreeting}
+
+            <br /><br />
+
+            ${selectedTranslations.aiDescription}
+
+            <br /><br />
+
+            ${selectedTranslations.aiExampleLabel}
+
+            <br />
+
+            <em>
+              ${selectedTranslations.aiExample}
+            </em>
+
+          `;
+        }
+
+        // ================================================
+        // LANGUAGE BUTTON ACTIVE STATE
+        // ================================================
+
         const idButton = document.getElementById("idLang");
 
         const enButton = document.getElementById("enLang");
@@ -1231,9 +1412,9 @@
         }
       }
 
-      // =====================================
+      // =====================================================
       // LANGUAGE BUTTONS
-      // =====================================
+      // =====================================================
 
       document
         .getElementById("idLang")
@@ -1243,9 +1424,9 @@
         .getElementById("enLang")
         ?.addEventListener("click", () => changeLanguage("en"));
 
-      // =====================================
+      // =====================================================
       // LOAD SAVED LANGUAGE
-      // =====================================
+      // =====================================================
 
       document.addEventListener("DOMContentLoaded", () => {
         const savedLanguage = localStorage.getItem("selectedLanguage") || "id";
@@ -1253,24 +1434,30 @@
         changeLanguage(savedLanguage);
       });
     </script>
-    <!-- ============================= -->
+
+    <!-- ===================================================== -->
     <!-- AI CHAT -->
-    <!-- ============================= -->
+    <!-- ===================================================== -->
 
     <script>
       const AI_FUNCTION_URL =
         "https://plfhmdtjubgrpoqrhdwo.supabase.co/functions/v1/ai-chat";
 
       const aiChatButton = document.getElementById("aiChatButton");
+
       const aiChatBox = document.getElementById("aiChatBox");
+
       const aiChatClose = document.getElementById("aiChatClose");
+
       const aiChatInput = document.getElementById("aiChatInput");
+
       const aiChatSend = document.getElementById("aiChatSend");
+
       const aiChatMessages = document.getElementById("aiChatMessages");
 
-      // =====================================
+      // =====================================================
       // OPEN CHAT
-      // =====================================
+      // =====================================================
 
       aiChatButton.addEventListener("click", () => {
         aiChatBox.classList.toggle("active");
@@ -1282,17 +1469,17 @@
         }
       });
 
-      // =====================================
+      // =====================================================
       // CLOSE CHAT
-      // =====================================
+      // =====================================================
 
       aiChatClose.addEventListener("click", () => {
         aiChatBox.classList.remove("active");
       });
 
-      // =====================================
+      // =====================================================
       // ADD MESSAGE
-      // =====================================
+      // =====================================================
 
       function addMessage(message, type) {
         const messageElement = document.createElement("div");
@@ -1309,9 +1496,9 @@
         return messageElement;
       }
 
-      // =====================================
+      // =====================================================
       // AI LOADING
-      // =====================================
+      // =====================================================
 
       function addTypingMessage() {
         const typing = document.createElement("div");
@@ -1319,11 +1506,17 @@
         typing.className = "ai-message";
 
         typing.innerHTML = `
+
           <div class="ai-typing">
+
             <span></span>
+
             <span></span>
+
             <span></span>
+
           </div>
+
         `;
 
         aiChatMessages.appendChild(typing);
@@ -1333,9 +1526,9 @@
         return typing;
       }
 
-      // =====================================
+      // =====================================================
       // SEND MESSAGE
-      // =====================================
+      // =====================================================
 
       async function sendAIMessage() {
         const message = aiChatInput.value.trim();
@@ -1344,19 +1537,42 @@
           return;
         }
 
-        // Tampilkan pertanyaan customer
+        // ================================================
+        // SHOW USER MESSAGE
+        // ================================================
+
         addMessage(message, "user");
 
-        // Kosongkan input
+        // ================================================
+        // CLEAR INPUT
+        // ================================================
+
         aiChatInput.value = "";
 
-        // Disable tombol
+        // ================================================
+        // DISABLE SEND
+        // ================================================
+
         aiChatSend.disabled = true;
 
-        // Loading
+        // ================================================
+        // SHOW LOADING
+        // ================================================
+
         const typingMessage = addTypingMessage();
 
         try {
+          // ==============================================
+          // GET CURRENT LANGUAGE
+          // ==============================================
+
+          const currentLanguage =
+            localStorage.getItem("selectedLanguage") || "id";
+
+          // ==============================================
+          // SEND TO SUPABASE EDGE FUNCTION
+          // ==============================================
+
           const response = await fetch(AI_FUNCTION_URL, {
             method: "POST",
 
@@ -1366,23 +1582,40 @@
 
             body: JSON.stringify({
               message: message,
-              language: localStorage.getItem("selectedLanguage") || "id",
+
+              language: currentLanguage,
             }),
           });
+
+          // ==============================================
+          // READ RESPONSE
+          // ==============================================
 
           const data = await response.json();
 
           typingMessage.remove();
 
+          // ==============================================
+          // HANDLE ERROR
+          // ==============================================
+
           if (!response.ok) {
             throw new Error(data.error || "AI gagal memberikan jawaban.");
           }
+
+          // ==============================================
+          // GET AI ANSWER
+          // ==============================================
 
           const answer =
             data.reply ||
             data.message ||
             data.response ||
             "Maaf, AI belum memberikan jawaban.";
+
+          // ==============================================
+          // SHOW AI ANSWER
+          // ==============================================
 
           addMessage(answer, "ai");
         } catch (error) {
@@ -1392,6 +1625,7 @@
 
           addMessage(
             "Maaf, AI sedang mengalami gangguan. Silakan coba lagi atau hubungi kami melalui WhatsApp.",
+
             "ai",
           );
         } finally {
@@ -1401,15 +1635,15 @@
         }
       }
 
-      // =====================================
+      // =====================================================
       // SEND BUTTON
-      // =====================================
+      // =====================================================
 
       aiChatSend.addEventListener("click", sendAIMessage);
 
-      // =====================================
+      // =====================================================
       // ENTER TO SEND
-      // =====================================
+      // =====================================================
 
       aiChatInput.addEventListener("keydown", (event) => {
         if (event.key === "Enter" && !event.shiftKey) {
