@@ -2320,16 +2320,20 @@ header.scrolled .menu-toggle {
 
 @media (max-width: 480px) {
   .ai-chat-button {
-    width: 54px;
-    height: 54px;
+    min-width: 125px;
+    height: 52px;
 
-    padding: 0;
+    padding: 0 17px;
 
-    font-size: 22px;
+    gap: 7px;
+
+    font-size: 14px;
+
+    border-radius: 999px;
   }
 
   .ai-chat-button span {
-    display: none;
+    display: inline;
   }
 
   .ai-chat-box {
