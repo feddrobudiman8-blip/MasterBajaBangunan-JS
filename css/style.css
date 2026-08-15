@@ -2415,3 +2415,66 @@ header.scrolled .menu-toggle {
     height: calc(100vh - 100px);
   }
 }
+/* ==========================================================
+   AI GOOGLE SOURCES
+========================================================== */
+
+.ai-sources {
+  margin-top: 12px;
+
+  padding-top: 10px;
+
+  border-top: 1px solid var(--border);
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.ai-sources-title {
+  margin-bottom: 3px;
+
+  color: var(--gray);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.4px;
+}
+
+.ai-source-link {
+  display: block;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  padding: 6px 8px;
+
+  border-radius: 7px;
+
+  background: #f5f8fc;
+
+  color: var(--primary);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  transition: var(--transition);
+}
+
+.ai-source-link:hover {
+  background: #eaf1fc;
+
+  color: var(--primary-dark);
+
+  transform: translateX(2px);
+}
